@@ -36,10 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'filme',
     'crispy_forms',
     'crispy_bootstrap5',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -152,3 +154,10 @@ LOGIN_URL = 'filme:login'
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hvrstajff',
+    'API_KEY': '434289858935649',
+    'API_SECRET': 'GaKQKFM1PMPkS3UNHmDC6vmKsvw',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
